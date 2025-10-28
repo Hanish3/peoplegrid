@@ -1,0 +1,81 @@
+/* Using card and avatar styles from CreatePost.css */
+@import url('./CreatePost.css');
+
+.post-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  position: relative;
+}
+
+.post-author {
+  font-weight: bold;
+}
+
+.post-timestamp {
+  font-size: 0.8rem;
+  color: #65676b;
+}
+
+.delete-button {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background: #e4e6eb;
+  border: none;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  font-size: 1.2rem;
+  line-height: 1;
+  cursor: pointer;
+  display: none; /* Hide by default */
+}
+
+.post:hover .delete-button {
+  display: block; /* Show on hover */
+}
+
+.post-content {
+  margin: 1rem 0;
+  line-height: 1.5;
+}
+
+.post-media {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-top: 1rem;
+  border: 1px solid #ced0d4;
+}
+
+.post-stats {
+  font-size: 0.9rem;
+  color: #65676b;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #ced0d4;
+}
+
+.post-actions {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 0.5rem;
+}
+
+.post-actions button {
+  flex: 1;
+  background: none;
+  border: none;
+  color: #65676b;
+  font-weight: bold;
+  padding: 0.5rem;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.post-actions button:hover {
+  background-color: #f0f2f5;
+}
+
+.like-button.liked {
+  color: #0d6efd; /* Blue color when liked */
+}

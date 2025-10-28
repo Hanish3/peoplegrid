@@ -1,0 +1,98 @@
+.main-content {
+  display: grid;
+  grid-template-columns: 1fr 2.5fr 1fr; /* 3-column layout */
+  gap: 1.5rem;
+  padding: 1.5rem;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.left-sidebar, .right-sidebar {
+  position: sticky;
+  top: 80px; /* Header height + padding */
+  align-self: start;
+}
+
+.nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.nav-list li {
+  padding: 0.8rem;
+  cursor: pointer;
+  border-radius: 8px;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+.nav-list li:hover {
+  background-color: #e4e6eb;
+}
+
+.card {
+  background-color: var(--card-background-color);
+  border-radius: 8px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Create Post Component */
+.create-post-header {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+.create-post-header textarea {
+  flex-grow: 1; border: none; outline: none; background-color: transparent;
+  font-size: 1.1rem; margin-left: 0.5rem; resize: none; min-height: 50px;
+}
+.create-post-actions {
+  display: flex; justify-content: space-around;
+}
+.create-post-actions button {
+  flex-grow: 1; background-color: transparent; border: none; padding: 0.8rem;
+  font-weight: 600; color: var(--text-secondary-color); cursor: pointer; border-radius: 6px;
+}
+.create-post-actions button:hover {
+  background-color: var(--background-color);
+}
+.create-post-actions .post-button {
+  background-color: var(--primary-color); color: white;
+}
+.create-post-actions .post-button:hover {
+  background-color: #0b5ed7;
+}
+
+/* Post Component */
+.post-header { display: flex; align-items: center; margin-bottom: 0.5rem; }
+.avatar { width: 45px; height: 45px; border-radius: 50%; margin-right: 10px; object-fit: cover; }
+.post-author { font-weight: bold; }
+.post-timestamp { font-size: 0.8rem; color: var(--text-secondary-color); }
+.post-content { margin: 1rem 0; line-height: 1.5; }
+.post-media { max-width: 100%; border-radius: 8px; margin-top: 1rem; border: 1px solid var(--border-color); }
+.post-actions {
+  display: flex; justify-content: space-around; border-top: 1px solid var(--border-color);
+  padding-top: 0.5rem; margin-top: 1rem;
+}
+.post-actions button {
+  flex: 1; background: none; border: none; color: var(--text-secondary-color);
+  font-weight: bold; padding: 0.5rem; cursor: pointer; border-radius: 4px;
+}
+.post-actions button:hover { background-color: var(--background-color); }
+
+/* Right Sidebar */
+.right-sidebar-card h3 { margin-top: 0; }
+.friend-list { list-style: none; padding: 0; }
+.friend-list li { padding: 0.5rem 0; cursor: pointer; }
+.friend-list li::before {
+  content: '●'; color: #31a24c; /* Green dot for online status */
+  margin-right: 0.75rem;
+}
+.nav-list li.active {
+  background-color: #e7f3ff;
+  color: #0d6efd;
+  font-weight: bold;
+}

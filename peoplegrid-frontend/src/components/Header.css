@@ -1,0 +1,55 @@
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  background-color: var(--card-background-color);
+  border-bottom: 1px solid var(--border-color);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  height: 60px;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  color: var(--primary-color);
+  font-size: 1.8rem;
+  margin-right: 1rem;
+}
+
+.search-bar {
+  padding: 0.6rem 1rem;
+  border-radius: 20px;
+  border: none;
+  background-color: var(--background-color);
+  width: 250px;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+.user-profile {
+  font-weight: 600;
+  margin-right: 1.5rem;
+}
+
+.logout-button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.logout-button:hover {
+  opacity: 0.9;
+}
